@@ -1,5 +1,8 @@
 	$green: #88a308;
 	$borders: 4px;
+//break points
+	$small: 860px;
+	$medium: 1080px;
 
 	@import url(../futura/stylesheet.css) screen;
 	* {
@@ -69,6 +72,34 @@
 		height: 120px;
 		background: $green;
 		border-radius: 8px 8px 0 0;
+
+		.betainfo {
+				display: none;
+				width: 300px;
+				min-height: 120px;
+				background-color: $green;
+				color: #fff;
+				position: absolute;
+				top: 10px;
+				left: calc(50% - 150px);
+				border: 2px solid #fff;
+				border-radius: $borders;
+
+			}
+
+			.betainfo-show {
+				display: block;
+				width: 300px;
+				min-height: 120px;
+				background-color: $green;
+				color: #fff;
+				position: absolute;
+				top: 10px;
+				left: calc(50% - 150px);
+				border: 2px solid #fff;
+				border-radius: $borders;
+
+			}
 	}
 
 
@@ -84,14 +115,14 @@ header h1 {
 		padding-left: 272px;
 		padding-top: 90px;
 
-	@media screen and (max-width: 860px) {
+	@media screen and (max-width: $small) {
 		background-image: none;
 		padding: 0 0 0 6px;
 		font-size: 4em;
 		line-height: 2em;
 		position: static;
 	}
-	@media screen and (max-width: 1080px) {
+	@media screen and (max-width: $medium) {
 		left: 10px;
 	}
 }
@@ -128,6 +159,14 @@ header h1 {
 		text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 		background: url(../img/btns.png) no-repeat;
 		border-radius: 6px;
+	}
+
+	@media screen and (max-width: $small) {
+		a {
+			width: 95px;
+			line-height: 52px;
+			font-size: 1.8em
+		}
 	}
 }
 	.nav_pickit a {
@@ -174,7 +213,7 @@ header h1 {
 		background: linear-gradient(to bottom, rgba(52,78,144,1) 0%,rgba(110,136,202,1) 100%); /* W3C */
 	}
 
-	.branding h2 {
+	/*.branding h2 {
 		background: url(../img/beta.png) no-repeat;
 		position: absolute;
 		z-index: 300;
@@ -190,16 +229,16 @@ header h1 {
 /*		transition-property: all;
 		transition-duration: .5s;
 		transition-timing-function: ease-in-out;*/
-		transition: all .5s ease-in-out;
+	/*	transition: all .5s ease-in-out;
 	}
 	.branding h2:hover {
 		cursor: pointer;
 		transform: rotate(0);
 		transform: scale(1.2);
+*//*
+	}*/
 
-	}
-
-@media screen and (max-width: 860px) {
+@media screen and (max-width: $small) {
 
 	.branding h2 {
 		display: none;
@@ -219,7 +258,7 @@ header h1 {
 		padding: 6px;
 	}
 }
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: $medium) {
 	.branding h2 {
 		right: 10px;
 	}
@@ -235,10 +274,19 @@ header h1 {
 	cursor: pointer;
 	-webkit-transform: scale(0.4) rotate(15deg);
 	-webkit-transition: all 0.5s linear;
-}
-.rect-container:hover {
+
+	&:hover {
 	-webkit-transform: scale(0.5) rotate(0deg);
-}
+	}
+	@media screen and (max-width: $small) {
+		top: -50px;
+		right: 10px;
+		-webkit-transform: scale(0.3);
+	}
+	@media screen and (max-width: $medium) {
+		right: -20px;
+		
+	}
 .rect {
 	background-color: #f90;
 	width: 200px;
@@ -256,6 +304,11 @@ header h1 {
 }
 .two { -webkit-transform: rotate(30deg); }
 .three { -webkit-transform: rotate(60deg); }
+}
+
+
+
+
 
 
 

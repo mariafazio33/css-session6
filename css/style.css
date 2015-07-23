@@ -78,6 +78,30 @@ header {
   background: #88a308;
   border-radius: 8px 8px 0 0;
 }
+header .betainfo {
+  display: none;
+  width: 300px;
+  min-height: 120px;
+  background-color: #88a308;
+  color: #fff;
+  position: absolute;
+  top: 10px;
+  left: calc(50% - 150px);
+  border: 2px solid #fff;
+  border-radius: 4px;
+}
+header .betainfo-show {
+  display: block;
+  width: 300px;
+  min-height: 120px;
+  background-color: #88a308;
+  color: #fff;
+  position: absolute;
+  top: 10px;
+  left: calc(50% - 150px);
+  border: 2px solid #fff;
+  border-radius: 4px;
+}
 
 header h1 {
   background: url(../img/basil.png) no-repeat;
@@ -142,6 +166,13 @@ header h1 {
   background: url(../img/btns.png) no-repeat;
   border-radius: 6px;
 }
+@media screen and (max-width: 860px) {
+  .nav_features a {
+    width: 95px;
+    line-height: 52px;
+    font-size: 1.8em;
+  }
+}
 
 .nav_pickit a {
   background-position: 0 0;
@@ -197,31 +228,31 @@ header h1 {
   /* W3C */
 }
 
-.branding h2 {
-  background: url(../img/beta.png) no-repeat;
-  position: absolute;
-  z-index: 300;
-  top: -20px;
-  right: -20px;
-  width: 85px;
-  height: 85px;
-  color: #fff;
-  text-align: center;
-  line-height: 85px;
-  text-transform: uppercase;
-  transform: rotate(12deg);
-  /*		transition-property: all;
-  		transition-duration: .5s;
-  		transition-timing-function: ease-in-out;*/
-  transition: all .5s ease-in-out;
-}
-
-.branding h2:hover {
-  cursor: pointer;
-  transform: rotate(0);
-  transform: scale(1.2);
-}
-
+	/*.branding h2 {
+		background: url(../img/beta.png) no-repeat;
+		position: absolute;
+		z-index: 300;
+		top:-20px;
+		right: -20px;
+		width: 85px;
+		height: 85px;
+		color: #fff;
+		text-align: center;
+		line-height: 85px;
+		text-transform: uppercase;
+		transform: rotate(12deg);
+/*		transition-property: all;
+		transition-duration: .5s;
+		transition-timing-function: ease-in-out;*/
+	/*	transition: all .5s ease-in-out;
+	}
+	.branding h2:hover {
+		cursor: pointer;
+		transform: rotate(0);
+		transform: scale(1.2);
+*/
+  /*
+	}*/
 @media screen and (max-width: 860px) {
   .branding h2 {
     display: none;
@@ -260,12 +291,22 @@ header h1 {
   -webkit-transform: scale(0.4) rotate(15deg);
   -webkit-transition: all 0.5s linear;
 }
-
 .rect-container:hover {
   -webkit-transform: scale(0.5) rotate(0deg);
 }
-
-.rect {
+@media screen and (max-width: 860px) {
+  .rect-container {
+    top: -50px;
+    right: 10px;
+    -webkit-transform: scale(0.3);
+  }
+}
+@media screen and (max-width: 1080px) {
+  .rect-container {
+    right: -20px;
+  }
+}
+.rect-container .rect {
   background-color: #f90;
   width: 200px;
   height: 200px;
@@ -273,20 +314,17 @@ header h1 {
   top: 0;
   left: 0;
 }
-
-.copy {
+.rect-container .copy {
   color: #fff;
   z-index: 9999;
   font-size: 5em;
   text-align: center;
   line-height: 200px;
 }
-
-.two {
+.rect-container .two {
   -webkit-transform: rotate(30deg);
 }
-
-.three {
+.rect-container .three {
   -webkit-transform: rotate(60deg);
 }
 
