@@ -70,7 +70,9 @@
 		background: $green;
 		border-radius: 8px 8px 0 0;
 	}
-	header h1 {
+
+
+header h1 {
 		background: url(../img/basil.png) no-repeat;
 		font-family: FuturaStdLight;
 		font-size: 5.625em;
@@ -223,6 +225,37 @@
 	}
 }
 
+
+.rect-container {
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	top: -70px;
+	right: -70px;
+	cursor: pointer;
+	-webkit-transform: scale(0.4) rotate(15deg);
+	-webkit-transition: all 0.5s linear;
+}
+.rect-container:hover {
+	-webkit-transform: scale(0.5) rotate(0deg);
+}
+.rect {
+	background-color: #f90;
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.copy {
+	color: #fff;
+	z-index: 9999;
+	font-size: 5em;
+	text-align: center;
+	line-height: 200px;
+}
+.two { -webkit-transform: rotate(30deg); }
+.three { -webkit-transform: rotate(60deg); }
 
 
 
